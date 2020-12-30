@@ -4,8 +4,8 @@ Description=<description about this service>
 [Service]
 User=root
 WorkingDirectory=/.scripts
-ExecStart=./autoshutdown 
-ExecStop=sleep 1 
+ExecStart=/.scripts/autoshutdown 
+ExecStop=/.scripts/stop
 Restart=always
 
 [Install]
