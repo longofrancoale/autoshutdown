@@ -1,0 +1,12 @@
+[Unit]
+Description=<description about this service>
+
+[Service]
+User=root
+WorkingDirectory=/.scripts
+ExecStart=autoshutdown
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+

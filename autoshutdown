@@ -1,0 +1,14 @@
+#/bin/bash
+while :
+do
+	SHDATE="$(date +'%H:%M')"
+	echo $SHDATE
+	#date +"%H:%M" >> $SHDATE
+	SHTIME="$(cat /.scripts/shutdowntime)"
+	if [ "$SHDATE" = "$SHTIME" ];
+	then
+		echo "exiting"
+		poweroff
+	fi
+	sleep 10
+done
